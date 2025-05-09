@@ -1,14 +1,2 @@
-modules = ["python-3.12", "bash"]
 language = "python3"
 run = "pip install -r requirements.txt && bash setup_all_with_replit.sh && cd dental_app && source venv/bin/activate && python3 app.py --host=0.0.0.0 --port=8080"
-
-[nix]
-channel = "stable-24_05"
-packages = ["nano"]
-
-[deployment]
-run = ["sh", "-c", "bash setup_all_with_replit.sh && cd dental_app && source venv/bin/activate && python app.py --host=0.0.0.0 --port=8080"]
-
-[[ports]]
-localPort = 8080
-externalPort = 80
