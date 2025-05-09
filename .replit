@@ -9,7 +9,7 @@ bash setup_all_with_replit.sh \
 
 [nix]
 channel = "stable-24_05"
-packages = ["python-3.12", "nano"]
+packages = ["python3", "nano"]
 
 [deployment]
 run = ["sh", "-c", "bash setup_all_with_replit.sh && cd dental_app && source venv/bin/activate && python app.py --host=0.0.0.0 --port=8080"]"
