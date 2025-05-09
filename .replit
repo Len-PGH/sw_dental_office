@@ -1,4 +1,4 @@
-modules = ["bash", "c-clang14", "python-3.12", "nodejs-20"]
+modules = ["python-3.12", "bash"]
 
 run = """
 bash setup_all_with_replit.sh \
@@ -9,7 +9,7 @@ bash setup_all_with_replit.sh \
 
 [nix]
 channel = "stable-24_05"
-packages = ["nano"]
+packages = ["nano", "python3"]
 
 [deployment]
 run = ["sh", "-c", "bash setup_all_with_replit.sh && cd dental_app && source venv/bin/activate && python app.py --host=0.0.0.0 --port=8080"]
